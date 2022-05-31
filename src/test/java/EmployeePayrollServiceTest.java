@@ -12,4 +12,13 @@ public class EmployeePayrollServiceTest {
                      "salary Double NOT NULL,start DATE NOT NULL, PRIMARY KEY (id))";
         Assertions.assertTrue(employeePayrollDBServices.createTable(sql));
     }
+
+    @Test
+    public void insertIntoTable()
+    {
+        String sql="INSERT INTO employee_payroll ( name, salary, start ) VALUE( 'Bill', 1000000.00, '2010-10-30' )," +
+                "( 'Tersia', 2000000.00, '2019-11-13' ),( 'charlie', 3000000.00, '2020-05-21' )";
+        Assertions.assertTrue(employeePayrollDBServices.insertRecord(sql));
+
+    }
 }
