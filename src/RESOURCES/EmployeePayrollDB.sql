@@ -113,3 +113,11 @@ mysql> select * from employee_payroll;
 |  3 | charlie | 3000000 | 2020-05-21 |
 +----+---------+---------+------------+
 3 rows in set (0.01 sec)
+
+*************************************************** UC4 ****************************************************************
+        // UC -Ability to retrieve all the employee payroll data that is added to payroll service database
+        - Use payroll_service database in MySQL Client
+        - Use SELECT * FROM employee_payroll to retrieve all the data from the employee_payroll table
+
+//Query to retrieve all records from the table.
+=> SELECT * FROM employee_payroll
