@@ -1,2 +1,4 @@
 DB Connected Successfully
-,Record Added Successfully in given Table...
+>Employee PayRoll Data [ID=1, Name = Bill, Salary = 1000000.0]
+@Employee PayRoll Data [ID=2, Name = Tersia, Salary = 2000000.0]
+AEmployee PayRoll Data [ID=3, Name = charlie, Salary = 3000000.0]

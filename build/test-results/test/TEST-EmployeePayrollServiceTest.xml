@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-31T17:45:27" hostname="hp-440-G5" time="0.181">
+<testsuite name="EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-31T18:24:21" hostname="hp-440-G5" time="0.381">
   <properties/>
-  <testcase name="insertIntoTable()" classname="EmployeePayrollServiceTest" time="0.181"/>
+  <testcase name="retriveDataFromTable()" classname="EmployeePayrollServiceTest" time="0.381"/>
   <system-out><![CDATA[DB Connected Successfully
-Record Added Successfully in given Table...
+Employee PayRoll Data [ID=1, Name = Bill, Salary = 1000000.0]
+Employee PayRoll Data [ID=2, Name = Tersia, Salary = 2000000.0]
+Employee PayRoll Data [ID=3, Name = charlie, Salary = 3000000.0]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
