@@ -53,7 +53,7 @@ mysql> show databases;
 //Query to create employee payroll table with columns id, name, salary and start date as column.
    - Note Id is set to auto increment.
 
-mysql> create table employee_payroll (
+    create table employee_payroll (
     id INT unsigned NOT NULL AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
     salary Double NOT NULL,
@@ -88,5 +88,28 @@ mysql> desc employee_payroll;
 +--------+--------------+------+-----+---------+----------------+
 4 rows in set (0.00 sec)
 
-mysql>
+*************************************************** UC3 ****************************************************************
 
+    //UC - Ability to create employee payroll data in the payroll service database as part of CRUD Operation
+        - Use payroll_service database in MySQL Client
+        - Use INSERT INTO employee_payroll
+        Query to create employees payroll data into the employee_payroll table
+
+//Query to insert record in the table.
+=>
+    INSERT INTO employee_payroll ( name, salary, start ) VALUES
+    ( 'Bill', 1000000.00, '2010-10-30' ),
+    ( 'Tersia', 2000000.00, '2019-11-13' ),
+    ( 'charlie', 3000000.00, '2020-05-21' );
+
+                                // Output from MySQL Client for Insert query.
+// Query to display records which are added using Insert Query
+mysql> select * from employee_payroll;
++----+---------+---------+------------+
+| id | name    | salary  | start      |
++----+---------+---------+------------+
+|  1 | Bill    | 1000000 | 2010-10-30 |
+|  2 | Tersia  | 2000000 | 2019-11-13 |
+|  3 | charlie | 3000000 | 2020-05-21 |
++----+---------+---------+------------+
+3 rows in set (0.01 sec)

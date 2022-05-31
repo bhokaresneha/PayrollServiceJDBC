@@ -19,6 +19,17 @@ public class EmployeePayrollDBServices implements EmployeePayrollServiceInterfac
         }
     }
 
+    public boolean insertRecord(String sql) {
+        try (Connection connection = JDBCConnection.getConnection();
+             Statement statement = connection.createStatement();) {
+            statement.executeUpdate(sql);
+            System.out.println("Record Added Successfully in given Table...");
+            return true;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
 

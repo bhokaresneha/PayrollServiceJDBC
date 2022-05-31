@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-31T17:19:51" hostname="hp-440-G5" time="0.208">
+<testsuite name="EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-31T17:45:27" hostname="hp-440-G5" time="0.181">
   <properties/>
-  <testcase name="createTableInDB()" classname="EmployeePayrollServiceTest" time="0.208"/>
+  <testcase name="insertIntoTable()" classname="EmployeePayrollServiceTest" time="0.181"/>
   <system-out><![CDATA[DB Connected Successfully
-Created table in given database...
+Record Added Successfully in given Table...
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
