@@ -8,6 +8,8 @@ public class EmployeePayrollServiceTest {
 
     @Test
     public void createTableInDB(){
-        Assertions.assertTrue(employeePayrollDBServices.createTable());
+        String sql="create table employee_payroll(id INT unsigned NOT NULL AUTO_INCREMENT,name VARCHAR(150) NOT NULL," +
+                     "salary Double NOT NULL,start DATE NOT NULL, PRIMARY KEY (id))";
+        Assertions.assertTrue(employeePayrollDBServices.createTable(sql));
     }
 }

@@ -4,19 +4,21 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class EmployeePayrollDBServices {
+public class EmployeePayrollDBServices implements EmployeePayrollServiceInterface{
 
-    public boolean createTable()
+   //createTable() method to Create table in payroll_service Database
+    public boolean createTable(String sql)
     {
         try (Connection connection = JDBCConnection.getConnection();
              Statement statement = connection.createStatement();) {
-            String table = "CREATE TABLE REGISTRATION (id int)";
-            statement.executeUpdate(table);
+                       statement.executeUpdate(sql);
             System.out.println("Created table in given database...");
             return true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
+
 }
 
