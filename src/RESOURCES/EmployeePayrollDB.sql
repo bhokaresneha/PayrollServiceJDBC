@@ -135,5 +135,34 @@ mysql> select * from employee_payroll;
  // Query to retrieve salary data for a particular employee as well as all employees who have joined in a particular data range
 =>  SELECT salary FROM employee_payroll WHERE name = 'Bill' or start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
 
-*************************************************** ********************************************************************
+*************************************************** UC6 ****************************************************************
+//UC - Ability to add Gender to Employee Payroll Table and Update the Rows to reflect the correct Employee Gender
+          - Use payroll_service database in MySQL Client
+          - Use Alter Table Command to add Field gender after the name field
+          - Use Update Query to set the gender using where condition with the employee name
+          - E.g. UPDATE employee_payroll set gender ='M' where name = 'Bill' or name ='Charlie';
 
+//- MySQL Client- for Alter table .
+
+//Query to Alter Table Command to add Field gender after the name field
+mysql> ALTER TABLE employee_payroll ADD gender CHAR(1) NOT NULL AFTER name;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+// Query to Display Description of Table - Gender colum is added after name column
+mysql> desc employee_payroll;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(150) | NO   |     | NULL    |                |
+| gender | char(1)      | NO   |     | NULL    |                |
+| salary | double       | NO   |     | NULL    |                |
+| start  | date         | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+//Query to Update records for Particular Employee
+UPDATE employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie'"
+
+************************************************************************************************************************
