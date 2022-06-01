@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-31T18:24:21" hostname="hp-440-G5" time="0.381">
+<testsuite name="EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-01T03:36:17" hostname="hp-440-G5" time="0.23">
   <properties/>
-  <testcase name="retriveDataFromTable()" classname="EmployeePayrollServiceTest" time="0.381"/>
+  <testcase name="retriveSalary_DataOfEmployee_UsingWhereClause()" classname="EmployeePayrollServiceTest" time="0.23"/>
   <system-out><![CDATA[DB Connected Successfully
-Employee PayRoll Data [ID=1, Name = Bill, Salary = 1000000.0]
-Employee PayRoll Data [ID=2, Name = Tersia, Salary = 2000000.0]
-Employee PayRoll Data [ID=3, Name = charlie, Salary = 3000000.0]
+Bill
+1000000.0
+Tersia
+2000000.0
+charlie
+3000000.0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

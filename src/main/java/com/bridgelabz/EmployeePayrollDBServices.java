@@ -32,7 +32,7 @@ public class EmployeePayrollDBServices implements EmployeePayrollServiceInterfac
             throw new RuntimeException(e);
         }
     }
-    public static List<EmployeePayroll> retriveData(String sql) {
+    public  List<EmployeePayroll> retriveData(String sql) {
         List<EmployeePayroll> employeeDataList=new ArrayList<>();
         try{
             Connection connection=JDBCConnection.getConnection();
@@ -49,6 +49,23 @@ public class EmployeePayrollDBServices implements EmployeePayrollServiceInterfac
         }
         return employeeDataList;
     }
+
+    public boolean retriveSalary(String sql)
+    {
+        try {
+            Connection connection = JDBCConnection.getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            while (resultSet.next()) {
+                System.out.println(resultSet.getDouble("salary"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }
+
 
 }
 
