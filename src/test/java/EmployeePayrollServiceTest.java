@@ -33,8 +33,15 @@ public class EmployeePayrollServiceTest
             {
                 System.out.println(data);
             }
-            Assertions.assertEquals(3,employeeData.size());
+            Assertions.assertEquals(4,employeeData.size());
+    }
+    @Test
+    public void retriveSalary_DataOfEmployee_UsingWhereClause()
+    {
+        String sql="SELECT salary FROM employee_payroll WHERE name = 'Bill' or  start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());";
+        Assertions.assertTrue(employeePayrollDBServices.retriveSalary(sql));
     }
 }
+
 
 

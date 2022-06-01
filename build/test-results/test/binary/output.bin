@@ -1,4 +1,10 @@
 DB Connected Successfully
->Employee PayRoll Data [ID=1, Name = Bill, Salary = 1000000.0]
-@Employee PayRoll Data [ID=2, Name = Tersia, Salary = 2000000.0]
-AEmployee PayRoll Data [ID=3, Name = charlie, Salary = 3000000.0]
+Bill
+
+1000000.0
+Tersia
+
+2000000.0
+charlie
+
+3000000.0
